@@ -34,7 +34,7 @@ function Header() {
             <h2 className='mt-2'>Todo App</h2>
         </div>
         <article className='flex items-center text-center text-white mx-4'>
-            <Link to={"/"} className='mx-4 hover:bg-white hover:text-black'>Home</Link>
+            <Link to={"/home"} className='mx-4 hover:bg-white hover:text-black'>Home</Link>
             <Link to={"/profile"} className='mx-4 hover:bg-white hover:text-black'>Profile</Link>
             {
               isAuthenticated? ( <button disabled={loading} onClick={logoutHandler} className='mx-4 hover:bg-white hover:text-black'>Logout</button>) : 

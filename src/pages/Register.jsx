@@ -39,10 +39,7 @@ function Register() {
    }
   };
 
-  if(isAuthenticated) return <Navigate to={"/"} />
-  else {
-    <Navigate to={"/register"} />
-  }
+  if(isAuthenticated) return <Navigate to={"/home"} />
 
   return (
     <div className=''>

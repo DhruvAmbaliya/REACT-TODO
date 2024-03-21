@@ -37,10 +37,7 @@ function Login() {
    }
   };
 
-  if(isAuthenticated) return <Navigate to={"/"} />
-  else {
-    <Navigate to={"/login"} />
-  }
+  if(isAuthenticated) return <Navigate to={"/home"} />
 
   return (
     <div >

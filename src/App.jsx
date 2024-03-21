@@ -32,8 +32,8 @@ function App() {
   return <BrowserRouter>
   <Header/>
     <Routes>
-      <Route path='*' element={<Login />}/>
-      <Route path="/home" element={<Home/>}/>
+      {/* <Route path='*' element={<Login />}/> */}
+      <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/register" element={<Register/>}/> 

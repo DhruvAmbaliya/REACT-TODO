@@ -1,4 +1,4 @@
-import { BrowserRouter,Navigate,Route,Routes } from "react-router-dom"
+import { HashRouter, hashHistory,Navigate,Route,Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Login from "./pages/Login"
@@ -29,9 +29,9 @@ function App() {
     });
   },[]);
 
-  return <BrowserRouter>
+  return <HashRouter>
   <Header/>
-    <Routes>
+    <Routes history={hashHistory}>
       {/* <Route path='*' element={<Login />}/> */}
       <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/" element={<Home/>}/>
@@ -40,7 +40,7 @@ function App() {
       <Route path="/register" element={<Register/>}/> 
     </Routes>
     <Toaster/>
-  </BrowserRouter> 
+  </HashRouter> 
 }
 
 export default App

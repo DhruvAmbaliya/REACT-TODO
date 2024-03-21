@@ -29,12 +29,6 @@ function App() {
     });
   },[]);
 
-  const NotFound = () => (
-    <div>
-      <h1>404 - Not Found!</h1>
-      <Link to="/">Go Home</Link>
-    </div>
-  );
 
   return <BrowserRouter>
   <Header/>
@@ -42,7 +36,6 @@ function App() {
       {/* <Route path='*' element={<Login />}/> */}
       <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/" element={<Home/>}/>
-      <Route component={NotFound} />
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/register" element={<Register/>}/> 

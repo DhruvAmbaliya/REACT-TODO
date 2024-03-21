@@ -1,4 +1,4 @@
-import { BrowserRouter,Link,Navigate,Route,Routes,Switch } from "react-router-dom"
+import { BrowserRouter,Link,Navigate,Route,Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Login from "./pages/Login"
@@ -38,7 +38,7 @@ function App() {
 
   return <BrowserRouter>
   <Header/>
-    <Switch>
+    <Routes>
       {/* <Route path='*' element={<Login />}/> */}
       <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/" element={<Home/>}/>
@@ -46,7 +46,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/register" element={<Register/>}/> 
-    </Switch>
+    </Routes>
     <Toaster/>
   </BrowserRouter> 
 }

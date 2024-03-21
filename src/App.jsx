@@ -1,4 +1,4 @@
-import { HashRouter,Navigate,Route,Routes } from "react-router-dom"has
+import { BrowserRouter,Link,Navigate,Route,Routes,Switch } from "react-router-dom"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Login from "./pages/Login"
@@ -29,18 +29,26 @@ function App() {
     });
   },[]);
 
-  return <HashRouter>
+  const NotFound = () => (
+    <div>
+      <h1>404 - Not Found!</h1>
+      <Link to="/">Go Home</Link>
+    </div>
+  );
+
+  return <BrowserRouter>
   <Header/>
-    <Routes history={hashHistory}>
+    <Switch>
       {/* <Route path='*' element={<Login />}/> */}
       <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/" element={<Home/>}/>
+      <Route component={NotFound} />
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/register" element={<Register/>}/> 
-    </Routes>
+    </Switch>
     <Toaster/>
-  </HashRouter> 
+  </BrowserRouter> 
 }
 
 export default App

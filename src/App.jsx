@@ -36,8 +36,8 @@ function App() {
   <Header/>
   <div className="pt-20">
     <Routes>
-      {/* <Route path='*' element={<Login />}/> */}
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path='*' element={<Login />}/>
+      {/* <Route path="*" element={<Navigate to="/login" />} /> */}
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>

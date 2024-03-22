@@ -1,11 +1,11 @@
-import { BrowserRouter,Link,Navigate,Route,Routes } from "react-router-dom"
+import { BrowserRouter,Navigate,Route,Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Login from "./pages/Login"
 import Profile from "./pages/Profile"
 import Register from "./pages/Register"
 import { Toaster } from "react-hot-toast"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import axios from "axios"
 import { Context, server } from "./main"
 import Footer from "./components/Footer"
@@ -13,11 +13,9 @@ import Footer from "./components/Footer"
 function App() {
 
   const {setUser,setIsAuthenticated,setLoading}= useContext(Context);
-  const [refresh,setRefresh] = useState(false);
 
   useEffect(()=>{
     setLoading(true);
-    setRefresh(prev=>!prev);
     axios.get(`${server}/users/me`,
     {
       withCredentials:true,
@@ -30,7 +28,7 @@ function App() {
       setIsAuthenticated(false);
       setLoading(false);
     });
-  },[refresh]);
+  },[]);
   
 
 

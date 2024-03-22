@@ -34,14 +34,16 @@ function App() {
 
   return <BrowserRouter>
   <Header/>
+  <div className="pt-20">
     <Routes>
-      <Route path='*' element={<Login />}/>
-      {/* <Route path="*" element={<Navigate to="/login" />} /> */}
+      {/* <Route path='*' element={<Login />}/> */}
+      <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/register" element={<Register/>}/> 
     </Routes>
+    </div>
     <Footer/>
     <Toaster/>
   </BrowserRouter> 

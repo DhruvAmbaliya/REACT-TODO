@@ -82,7 +82,7 @@ function Home() {
   return (
     <div>
     <section>
-      <form className='mt-5 ml-5' onSubmit={submitHandler}>
+      <form className='flex flex-row mt-5 ml-5 mr-5' onSubmit={submitHandler}>
       <input className='border-4 border-black-500/100' type='text' placeholder='Title' required value={title} onChange={(e)=>setTitle(e.target.value)} />
       <input className='border-4 border-black-500/100 ml-2' type='text' placeholder='Description' required value={description} onChange={(e)=>setDescription(e.target.value)} />
       <button disabled={loading} className='border-4 border-slate-300 hover:border-indigo-300 ml-2' type='submit'>Add Task</button>

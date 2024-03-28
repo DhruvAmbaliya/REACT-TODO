@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const TodoItem = ({title,description,isCompleted,updateHandler,deleteHandler,id,createdAt}) => {
   return (
-    <div className='flex flex-col ml-5 mt-5 box-border border-4' >
+    <div className='flex flex-col ml-5 mt-5 mr-5 box-border border-4' >
         <div className='flex flex-col'>
             <h4>Title : {title} </h4>
             <p >Description : {description}  </p>

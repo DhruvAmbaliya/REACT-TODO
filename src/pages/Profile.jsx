@@ -34,7 +34,7 @@ const Profile=()=> {
 
   return (
     loading ? <Loader/> :(
-      <div>
+      <div className='ml-7 mt-5'>
         <h1 className='text-2xl font-bold'>Name : {user?.name}</h1>
         <p>Email : {user?.email}</p>
       </div>

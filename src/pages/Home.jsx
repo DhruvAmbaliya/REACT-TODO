@@ -82,13 +82,13 @@ function Home() {
   return (
     <div>
     <section>
-      <form className='flex flex-row mt-5 ml-5 mr-5' onSubmit={submitHandler}>
-      <input className='border-4 border-black-500/100' type='text' placeholder='Title' required value={title} onChange={(e)=>setTitle(e.target.value)} />
-      <input className='border-4 border-black-500/100 ml-2' type='text' placeholder='Description' required value={description} onChange={(e)=>setDescription(e.target.value)} />
-      <button disabled={loading} className='border-4 border-slate-300 hover:border-indigo-300 ml-2' type='submit'>Add Task</button>
+      <form className='flex flex-col mt-3 ml-5 mr-5 sm:w-auto sm:flex-row' onSubmit={submitHandler}>
+      <input className='box border-4 mt-2' type='text' placeholder='Title' required value={title} onChange={(e)=>setTitle(e.target.value)} />
+      <input className='box border-4  ml-0 mt-2 sm:ml-2' type='text' placeholder='Description' required value={description} onChange={(e)=>setDescription(e.target.value)} />
+      <button disabled={loading} className='box border-4 border-slate-300 hover:border-indigo-300 ml-0 mt-2 sm:ml-2' type='submit'>Add Task</button>
       </form>
     </section>
-    <section >
+    <section className='mb-24'>
     { tasks.map((i)=>(
       <TodoItem
       title={i.title} 

@@ -88,9 +88,9 @@ function Home() {
       <button disabled={loading} className='border-4 border-slate-300 hover:border-indigo-300 ml-2' type='submit'>Add Task</button>
       </form>
     </section>
-    <section className=''>
+    <section >
     { tasks.map((i)=>(
-      <TodoItem 
+      <TodoItem
       title={i.title} 
       description={i.description} 
       isCompleted={i.isCompleted} 
